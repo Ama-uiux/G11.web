@@ -9,18 +9,13 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-}
-
 /* --- MAIN HERO --- */
 .main {
     width: 100%;
     background: linear-gradient(to top, rgba(68, 34, 5, 0.5)50%, rgba(77, 40, 5, 0.5)50%), url(background.jpg);
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
+    height: 109vh;
 }
 
 /* --- NAVBAR --- */
@@ -31,25 +26,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 0 20px;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
     color: rgb(219, 177, 121);
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu ul {
     display: flex;
-    gap: 30px;
-    list-style: none;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
 }
 
 .menu ul li a {
     text-decoration: none;
     color: rgb(211, 191, 167);
+    font-family: Arial;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -61,38 +59,41 @@ body {
 /* --- HERO SECTION --- */
 .hero {
     position: relative;
-    width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    padding: 0 20px;
+    align-items: center;
+    padding: 0 5%;
 }
 
 .hero-content {
+    width: 100%;
     max-width: 500px;
     color: rgb(241, 200, 153);
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.7;
     margin-bottom: 20px;
+    color: rgb(246, 247, 244);
 }
 
 .btn {
     display: inline-block;
     background: rgb(51, 15, 1);
-    color: #fff;
+    color: rgb(255, 255, 254);
     padding: 10px 30px;
     border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
     transition: 0.3s;
 }
 
@@ -100,115 +101,148 @@ body {
     background: rgb(148, 7, 2);
 }
 
-/* --- CATEGORY SECTIONS --- */
+/* --- WOMEN CATEGORY --- */
+.women-category {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("brown.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
 .brand-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 40px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
-.women-section,
-.product-grid,
-.events-grid,
-.board-grid {
+.women-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
-.product-card,
-.event-card,
-.board-card {
+.product-card {
     background: #fff;
     border-radius: 12px;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
+    transition: 0.3s ease;
 }
 
-.product-card:hover,
-.event-card:hover,
-.board-card:hover {
-    transform: translateY(-5px);
+.product-card:hover {
+    transform: translateY(-6px);
 }
 
-/* Product card specifics */
-.product-card img,
-.event-card img,
-.board-card img {
+.product-card img {
     width: 100%;
+    height: 320px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.product-card h3,
-.product-name,
-.event-info h3,
-.board-card h3 {
+.product-card h3 {
+    margin: 15px 0 5px;
     font-size: 1.1rem;
-    margin: 10px 0 5px;
 }
 
-.product-card p,
-.product-price,
-.product-note,
-.event-date,
-.board-card p {
+.product-card p {
     font-size: 0.9rem;
     color: #555;
-    margin-bottom: 5px;
 }
 
 .price {
     font-weight: bold;
+    margin-top: 8px;
     font-size: 1rem;
 }
 
-.badge,
-.brand-badge {
+.badge {
     display: inline-block;
+    background: black;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* --- MEN CATEGORY --- */
+.men-category {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("brown.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.brand-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     background: black;
     color: white;
     font-size: 12px;
     padding: 5px 10px;
     border-radius: 20px;
-    margin-bottom: 10px;
-    position: relative;
 }
 
-/* --- INQUIRIES SECTION --- */
+/* --- INQUIRIES --- */
 .inquiries-section {
     padding: 60px 20px;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("brown 2.jpg");
+    color: white;
 }
 
 .inquiries-text {
     max-width: 600px;
-    margin: 0 auto 30px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
     color: #ccc;
-    font-size: 16px;
+}
+
+.inquiry-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
 }
 
 .input-group input,
 .input-group textarea {
     width: 100%;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px;
     border: none;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
 .submit-btn {
     background: white;
     color: black;
-    padding: 12px 25px;
+    padding: 14px 30px;
+    border: none;
     border-radius: 30px;
-    font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -218,43 +252,67 @@ body {
     color: black;
 }
 
-/* --- EVENTS SECTION --- */
+/* --- EVENTS --- */
 .events-section {
     padding: 60px 20px;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("black.jpg");
+    color: white;
 }
 
 .events-subtitle {
-    font-size: 16px;
+    font-size: 1rem;
     color: #ccc;
     margin-bottom: 40px;
 }
 
-/* --- ABOUT SECTION --- */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.event-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --- ABOUT --- */
 .about-section {
     padding: 60px 20px;
-    text-align: center;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("red.jpg");
+    text-align: center;
+    color: white;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
 }
 
 .about-text {
     max-width: 700px;
-    margin: 0 auto 40px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: white;
+    margin: 0 auto 40px auto;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
-.board-title {
-    font-size: 24px;
-    margin-bottom: 30px;
+/* BOARD MEMBERS */
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-items: center;
 }
 
 .board-card img {
     width: 90px;
     height: 90px;
     border-radius: 50%;
+    object-fit: cover;
     border: 4px solid #ddd;
     margin-bottom: 10px;
 }
@@ -264,20 +322,13 @@ body {
 /* Tablet */
 @media (max-width: 900px) {
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
-
     .hero-content p {
         font-size: 1rem;
     }
-
-    .product-card img,
-    .event-card img {
-        height: 220px;
-    }
-
-    .board-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .brand-title {
+        font-size: 2rem;
     }
 }
 
@@ -285,38 +336,30 @@ body {
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 10px 20px;
+        gap: 15px;
     }
 
     .hero-content {
-        max-width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 90%;
         text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
-    .women-section,
-    .product-grid,
-    .events-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .brand-title {
+        font-size: 1.5rem;
     }
 
-    .board-grid {
-        grid-template-columns: 1fr;
+    .product-card img {
+        height: 220px;
     }
 
-    .product-card img,
     .event-card img {
         height: 180px;
     }
