@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    
 }
 
 .main{
@@ -24,6 +24,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+     width: 1200px;
+    height: 75px;
+    margin: auto;
     padding: 15px 50px;
     background: #fff;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -109,6 +112,8 @@ a {
 /* --- PRODUCT GRID --- */
 .women-section, .product-grid {
     display: flex;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("brown.jpg");
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
