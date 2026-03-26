@@ -1,4 +1,4 @@
-/* --- RESET --- */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* --- MAIN HERO --- */
+/* MAIN HERO */
 .main {
     width: 100%;
     background: linear-gradient(to top, rgba(68, 34, 5, 0.5)50%, rgba(77, 40, 5, 0.5)50%), url(background.jpg);
@@ -18,26 +18,22 @@ html {
     height: 109vh;
 }
 
-/* --- NAVBAR --- */
-navbar{
-    width: 1200px;
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    max-width: 1200px;
     height: 75px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-.icon{
-    width: 200px;
-    float: left;
-    height:70px;
-}
-
-.logo{
+.logo {
     color: rgb(219, 177, 121);
     font-size: 35px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-left: 10px;
-    float: left;
-    padding-top: 10;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu ul {
@@ -61,7 +57,7 @@ navbar{
     color: rgb(148, 7, 2);
 }
 
-/* --- HERO SECTION --- */
+/* HERO SECTION */
 .hero {
     position: relative;
     height: 100vh;
@@ -88,6 +84,7 @@ navbar{
     font-size: 1.2rem;
     line-height: 1.7;
     margin-bottom: 20px;
+    max-width: 500px;
     color: rgb(246, 247, 244);
 }
 
@@ -95,51 +92,38 @@ navbar{
     display: inline-block;
     background: rgb(51, 15, 1);
     color: rgb(255, 255, 254);
-    padding: 10px 30px;
+    padding: 8px 30px;
+    margin: 30px 0;
     border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
 }
 
 .btn:hover {
     background: rgb(148, 7, 2);
 }
 
-/* --- WOMEN CATEGORY --- */
+/* WOMEN CATEGORY */
 .women-category {
-    padding: 60px 20px;
+    padding: 100px 30px;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("brown.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin: 0;
     color: white;
 }
 
 .brand-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 40px;
     margin-bottom: 40px;
     letter-spacing: 3px;
+    color: white;
 }
 
 .women-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-}
-
-.product-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-6px);
 }
 
 .product-card img {
@@ -149,132 +133,47 @@ navbar{
     border-radius: 10px;
 }
 
-.product-card h3 {
-    margin: 15px 0 5px;
-    font-size: 1.1rem;
-}
-
-.product-card p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.price {
-    font-weight: bold;
-    margin-top: 8px;
-    font-size: 1rem;
-}
-
-.badge {
-    display: inline-block;
-    background: black;
-    color: white;
-    padding: 5px 12px;
-    font-size: 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-}
-
-/* --- MEN CATEGORY --- */
+/* MEN CATEGORY */
 .men-category {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("brown.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
-.category-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
+/* PRODUCT GRID */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
 }
 
-.brand-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: black;
-    color: white;
-    font-size: 12px;
-    padding: 5px 10px;
-    border-radius: 20px;
+.product-card img {
+    height: 260px;
 }
 
-/* --- INQUIRIES --- */
+/* INQUIRIES */
 .inquiries-section {
-    padding: 60px 20px;
+    padding: 100px 20px;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("brown 2.jpg");
     color: white;
 }
 
-.inquiries-text {
-    max-width: 600px;
-    margin: 0 auto 40px;
-    font-size: 1rem;
-    color: #ccc;
-}
-
-.inquiry-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group input,
-.input-group textarea {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.submit-btn {
-    background: white;
-    color: black;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.submit-btn:hover {
-    background: rgb(148, 7, 2);
-    color: black;
-}
-
-/* --- EVENTS --- */
+/* EVENTS */
 .events-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("black.jpg");
     color: white;
-}
-
-.events-subtitle {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 40px;
 }
 
 .events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -282,27 +181,13 @@ navbar{
     width: 100%;
     height: 220px;
     object-fit: cover;
-    border-radius: 8px;
 }
 
-/* --- ABOUT --- */
+/* ABOUT */
 .about-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("red.jpg");
     text-align: center;
-    color: white;
-}
-
-.about-container {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.about-text {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    font-size: 1rem;
-    line-height: 1.7;
 }
 
 /* BOARD MEMBERS */
@@ -319,29 +204,45 @@ navbar{
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ddd;
-    margin-bottom: 10px;
 }
 
-/* --- RESPONSIVE --- */
+/* -------- RESPONSIVE -------- */
 
 /* Tablet */
 @media (max-width: 900px) {
+    .women-section,
+    .product-grid,
+    .board-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brand-title {
+        font-size: 30px;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
+
     .hero-content p {
         font-size: 1rem;
     }
-    .brand-title {
-        font-size: 2rem;
+
+    .product-card img {
+        height: 240px;
     }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
+    .women-section,
+    .product-grid,
+    .board-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-title {
+        font-size: 26px;
     }
 
     .hero-content {
@@ -355,10 +256,6 @@ navbar{
 
     .hero-content p {
         font-size: 0.9rem;
-    }
-
-    .brand-title {
-        font-size: 1.5rem;
     }
 
     .product-card img {
