@@ -1,369 +1,323 @@
-/* --- GENERAL STYLES --- */
+/* --- RESET --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #f9f9f9;
-    color: #333;
-    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* --- MAIN HERO --- */
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(68, 34, 5, 0.5)50%, rgba(77, 40, 5, 0.5)50%), url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 /* --- NAVBAR --- */
 .navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background: #fff;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 15px 20px;
 }
 
-.navbar .menu ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.navbar .menu ul li a {
+.logo {
+    font-size: 28px;
     font-weight: bold;
-    color: #333;
-    transition: color 0.3s;
+    color: rgb(219, 177, 121);
 }
 
-.navbar .menu ul li a:hover {
-    color: #ff4c60;
+.menu ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-.logo img {
-    max-width: 120px;
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(211, 191, 167);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: rgb(148, 7, 2);
 }
 
 /* --- HERO SECTION --- */
 .hero {
-    background: url('hero-bg.jpg') center/cover no-repeat;
-    height: 80vh;
+    position: relative;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #fff;
+    justify-content: flex-end;
     padding: 0 20px;
 }
 
+.hero-content {
+    max-width: 500px;
+    color: rgb(241, 200, 153);
+}
+
 .hero-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
 .hero-content p {
     font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.hero .btn {
-    background: #ff4c60;
+.btn {
+    display: inline-block;
+    background: rgb(51, 15, 1);
     color: #fff;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: 0.3s;
 }
 
-.hero .btn:hover {
-    background: #e04357;
+.btn:hover {
+    background: rgb(148, 7, 2);
 }
 
-/* --- CATEGORY SECTIONS (WOMEN / MEN) --- */
+/* --- CATEGORY SECTIONS --- */
 .brand-title {
     text-align: center;
-    margin: 30px 0 20px;
-    font-size: 2rem;
-    color: #222;
+    font-size: 36px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
 }
 
-.center-wrapper {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.category-title {
-    font-size: 1.6rem;
-    color: #ff4c60;
-    margin-bottom: 20px;
-}
-
-/* --- PRODUCT GRID --- */
-.women-section, .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.women-section,
+.product-grid,
+.events-grid,
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-    padding: 0 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.product-card {
+.product-card,
+.event-card,
+.board-card {
     background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 220px;
+    border-radius: 12px;
+    padding: 15px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
 }
 
-.product-card:hover {
+.product-card:hover,
+.event-card:hover,
+.board-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.product-card img {
+/* Product card specifics */
+.product-card img,
+.event-card img,
+.board-card img {
     width: 100%;
-    height: 220px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-.product-card h3 {
-    margin: 12px 0 5px;
+.product-card h3,
+.product-name,
+.event-info h3,
+.board-card h3 {
     font-size: 1.1rem;
-    color: #222;
+    margin: 10px 0 5px;
 }
 
-.product-card p, .product-card .price, .product-note {
+.product-card p,
+.product-price,
+.product-note,
+.event-date,
+.board-card p {
     font-size: 0.9rem;
     color: #555;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
-.badge, .brand-badge {
+.price {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.badge,
+.brand-badge {
     display: inline-block;
-    background: #ff4c60;
-    color: #fff;
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    margin-top: 10px;
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 /* --- INQUIRIES SECTION --- */
 .inquiries-section {
-    padding: 50px 20px;
-    background: #fff;
+    padding: 60px 20px;
     text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("brown 2.jpg");
 }
 
-.inquiries-section h1 {
-    margin-bottom: 15px;
-}
-
-.inquiries-section p {
-    margin-bottom: 25px;
+.inquiries-text {
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 30px;
+    color: #ccc;
+    font-size: 16px;
 }
 
-.inquiry-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.inquiry-form .input-group {
-    margin-bottom: 15px;
-}
-
-.inquiry-form input, .inquiry-form textarea {
+.input-group input,
+.input-group textarea {
     width: 100%;
     padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
 }
 
 .submit-btn {
+    background: white;
+    color: black;
     padding: 12px 25px;
-    background: #ff4c60;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .submit-btn:hover {
-    background: #e04357;
+    background: rgb(148, 7, 2);
+    color: black;
 }
 
 /* --- EVENTS SECTION --- */
 .events-section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("black.jpg");
 }
 
-.events-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.event-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 260px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.event-card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-}
-
-.event-card .event-info {
-    padding: 15px;
-}
-
-.event-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: #ff4c60;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 0.85rem;
-}
-
-.event-btn:hover {
-    background: #e04357;
+.events-subtitle {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 40px;
 }
 
 /* --- ABOUT SECTION --- */
 .about-section {
-    padding: 50px 20px;
-    background: #f5f5f5;
+    padding: 60px 20px;
     text-align: center;
-}
-
-.about-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.about-heading {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("red.jpg");
 }
 
 .about-text {
-    font-size: 1rem;
-    margin-bottom: 40px;
-    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: white;
 }
 
-/* --- BOARD OF TRUSTEES --- */
 .board-title {
-    font-size: 1.5rem;
-    color: #ff4c60;
-    margin-bottom: 25px;
-}
-
-.board-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.board-card {
-    background: #fff;
-    width: 180px;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.board-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
 .board-card img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ddd;
+    border: 4px solid #ddd;
     margin-bottom: 10px;
 }
 
-.board-card h3 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
+/* --- RESPONSIVE --- */
 
-.board-card p {
-    font-size: 0.85rem;
-    color: #555;
-}
-
-/* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 15px 30px;
-    }
+/* Tablet */
+@media (max-width: 900px) {
     .hero-content h1 {
         font-size: 2.2rem;
     }
-    .women-section, .product-grid, .events-grid, .board-grid {
-        gap: 20px;
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .product-card img,
+    .event-card img {
+        height: 220px;
+    }
+
+    .board-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
-    .navbar .menu ul {
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
         flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
+        padding: 10px 20px;
     }
-    .hero {
-        height: 60vh;
+
+    .hero-content {
+        max-width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
     }
+
     .hero-content h1 {
         font-size: 1.8rem;
     }
-    .product-card, .board-card, .event-card {
-        width: 45%;
-    }
-}
 
-@media (max-width: 480px) {
-    .product-card, .board-card, .event-card {
-        width: 90%;
-    }
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
     .hero-content p {
         font-size: 0.95rem;
+    }
+
+    .women-section,
+    .product-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .board-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img,
+    .event-card img {
+        height: 180px;
     }
 }
