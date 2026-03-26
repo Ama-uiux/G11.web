@@ -321,36 +321,6 @@ html{
     border-radius:20px;
 }
 
-/* ---------- RESPONSIVE ---------- */
-
-/* Tablet */
-@media (max-width:900px){
-
-.product-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.brand-title{
-font-size:30px;
-}
-
-}
-
-@media (max-width:600px){
-
-.product-grid{
-grid-template-columns:1fr;
-}
-
-.product-card img{
-height:220px;
-}
-
-.brand-title{
-font-size:26px;
-}
-
-}
 .inquiries-section {
     padding: 100px 20px;
     text-align: center;
@@ -539,7 +509,32 @@ font-size:26px;
 .board-card p{
     font-size:13px;
     color:#777;
-}
+} 
+
+/* Tablet */
+@media (max-width: 900px) {
+    .women-section,
+    .product-grid,
+    .board-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brand-title {
+        font-size: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .product-card img {
+        height: 240px;
+    }
+}`
 
 /* Mobile */
 @media (max-width: 600px) {
