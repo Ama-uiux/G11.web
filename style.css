@@ -19,20 +19,25 @@ html {
 }
 
 /* --- NAVBAR --- */
-.navbar {
-    width: 100%;
-    max-width: 1200px;
+navbar{
+    width: 1200px;
+    height: 75px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
 }
 
-.logo {
+.icon{
+    width: 200px;
+    float: left;
+    height:70px;
+}
+
+.logo{
     color: rgb(219, 177, 121);
     font-size: 35px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 10px;
+    float: left;
+    padding-top: 10;
 }
 
 .menu ul {
