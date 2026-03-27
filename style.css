@@ -97,42 +97,57 @@ ul li a:hover{
 }
 
 
-}
 .hero {
-    text-align: center; /* Centers text inside the section */
-    display: flex; /* Use flexbox to center the content */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Ensures the section takes full width */
-    max-width: 1200px; /* Optional: Limits width on larger screens */
-    margin: 0 auto; /* Ensures section is centered */
-    padding: 20px; /* Optional: Adds padding around the section */
+    position: relative;
+    height: 100vh;
+
 }
 
 .hero-content {
-    max-width: 600px;
-    width: 100%;
+position: absolute;
+right: 6%;
+top: 50%;
+transform: translateY(-50%);
+width: 500px;
+color: rgb(241, 200, 153);
 }
 
-.hero h1, .hero p {
-    text-align: center; /* Ensures text inside the hero is centered */
+.hero-content h1{
+font-size: 68px;
+font-weight: 800;
+line-height: 1.1;
+margin-bottom: 25px;
 }
 
-/* Button styling */
-.btn {
+.hero-content p{
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 500px;
+    color: rgb(246, 247, 244);
+}
+.hero-text h1 {
+    font-size: 65px;         
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.9;
+}
+.btn{
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 25px;
-    background: maroon; /* adjust to your color */
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
+    background: rgb(51, 15, 1);
+    color: rgb(255, 255, 254);
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
 }
 
 .btn:hover{
 background: rgb(148, 7, 2);
 }
+
 
 /* For larger screens (desktop) */
 @media (min-width: 1024px) {
