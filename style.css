@@ -15,11 +15,10 @@ body{
     height: 109vh;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     max-width: 1200px;
-    height: 75px;
-    margin: auto;
+    padding: 0 15px;
 }
 
 .icon{
@@ -52,7 +51,7 @@ align-items: center;
 
 ul li{
 list-style: none;
-margin-left: 62px;
+margin-left: 20px;
 margin-top: 15px;
 font-size: 14px;
 }
@@ -78,10 +77,11 @@ ul li a:hover{
 
 .hero-content {
 position: absolute;
-right: 6%;
+right:5%;
 top: 50%;
 transform: translateY(-50%);
-width: 500px;
+width: 90px;
+max-width: 500px;
 color: rgb(241, 200, 153);
 }
 
