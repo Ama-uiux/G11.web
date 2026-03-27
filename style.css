@@ -108,8 +108,8 @@ ul li a:hover{
 
 .hero-content {
 position: absolute;
-right: 8%;
-top: 70%;
+right: 4%;
+top: 40%;
 transform: translateY(-50%);
 width: 500px;
 color: rgb(241, 200, 153);
