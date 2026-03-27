@@ -21,6 +21,33 @@ body{
     padding: 0 15px;
 }
 
+@media (max-width: 600px) {
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        width: auto;
+    }
+
+    ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 100%;
+        display: none; /* you can toggle later */
+    }
+
+    ul li {
+        margin: 15px 0;
+    }
+}
+
 .icon{
     width: 200px;
     float: left;
