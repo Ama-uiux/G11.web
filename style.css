@@ -72,7 +72,8 @@ ul li a:hover{
 .hero {
     position: relative;
     height: 100vh;
-
+    width: 100%;
+    max-width:100%;
 }
 
 .hero-content {
@@ -147,6 +148,8 @@ background: rgb(148, 7, 2);
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: 0.3s ease;
+    width:100%;
+    max-width:100%;
 }
 
 .product-card:hover {
@@ -195,6 +198,15 @@ background: rgb(148, 7, 2);
     color:none;
     margin: 0px ;
     padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+    display: block;
+}
+*{
+    outline: 1px solid red;
 }
 
 /* -------- RESPONSIVE DESIGN -------- */
