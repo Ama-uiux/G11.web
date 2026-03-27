@@ -26,7 +26,7 @@ body{
     .navbar {
         display: flex;
         justify-content: space-between;
-        align-items: horizontal;
+        align-items: center;
     }
 
     .menu {
@@ -34,11 +34,11 @@ body{
     }
 
     ul {
-        flex-direction: column;
+        flex-direction: row;
         position: absolute;
         top: 70px;
         right: 0;
-        background:(0,0,0,0,0,brown);
+        background:(0,0,0,0,13);
         width: 100%;
         display: none; /* you can toggle later */
     }
