@@ -38,7 +38,7 @@ body{
         position: absolute;
         top: 70px;
         right: 0;
-        background: rgba(0,0,0,0.4);
+        background:(0,0,0,0,0,brown);
         width: 100%;
         display: none; /* you can toggle later */
     }
@@ -103,7 +103,7 @@ ul li a:hover{
     justify-content: flex-end; /* Align to the right side */
     align-items: center;       /* Center vertically */
     text-align: center;        /* Center the text inside the hero-content */
-    padding-right: 20px; 
+    padding-right: 50x; 
 }
 
 .hero-content {
